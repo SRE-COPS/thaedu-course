@@ -1,6 +1,9 @@
 https://ranchergovernment.com/blog/article-simple-rke2-longhorn-and-rancher-install
 
+# Update yum repo content
+    /etc/yum.repos.d/CentOS-Base.repo
 
+    file conentn : https://serverfault.com/questions/904304/could-not-resolve-host-mirrorlist-centos-org-centos-7
  # Rocky instructions
  # stop the software firewall
  systemctl stop firewalld
@@ -77,7 +80,7 @@ https://ranchergovernment.com/blog/article-simple-rke2-longhorn-and-rancher-inst
  helm upgrade -i cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace
 
  # helm install rancher
- helm upgrade -i rancher rancher-latest/rancher --create-namespace --namespace cattle-system --set hostname=rancher.dockr.life --set bootstrapPassword=bootStrapAllTheThings --set replicas=1
+ helm upgrade -i rancher rancher-latest/rancher --create-namespace --namespace cattle-system --set hostname=rancher.iot.nitin --set bootstrapPassword=Linux5000 --set replicas=2
 
 
  # Longhorn
